@@ -4,17 +4,12 @@ import TabsTableHead from './TabsTableHead';
 import TabsTableBody from './TabsTableBody';
 
 
-const TabsTable = ({ fields, rows }) => 
+const TabsTable = () => 
 (
     <table className="tabs-table">
         
-        <TabsTableHead 
-            fields={fields}
-        />
-    
-        <TabsTableBody 
-            rows={rows}
-        />
+        <TabsTableHead />
+        <TabsTableBody />
 
     </table>
 ); 

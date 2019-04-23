@@ -1,30 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Tabs from './Tabs';
+import Tabs from './components';
 
-const fields = ['', 'Name', 'Age', 'Country']; 
-const rows = 
-    [
-        [
-            'Carmen'
-            , '33 years old'
-            , 'Spain'
-        ]
-        , [
-            'Carmen'
-            , '33 years old'
-            , 'Spain'
-        ]
-    ];
 
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+
+import reducers from './reducers';
+
+const store = createStore(reducers)
 
 
 ReactDOM.render(
-    <Tabs
-        fields={fields}
-        rows={rows}
-    />
+    <Provider 
+        store={store}
+    >
+        <Tabs />
+    </Provider>
     , document.getElementById('app')
 );
 

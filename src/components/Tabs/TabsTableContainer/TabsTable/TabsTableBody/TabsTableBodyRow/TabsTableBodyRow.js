@@ -10,7 +10,7 @@ const TabsTableBodyRow = ({ cells, isGray }) =>
 
     return(
         <tr className={className}>
-            <td className="tabs-table-cell-checkbox">
+            <td className="tabs-table-cell-checkbox tabs-table-cell">
                 <input type="checkbox" />
             </td>
             

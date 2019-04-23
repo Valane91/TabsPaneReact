@@ -1,10 +1,25 @@
 import React from 'react'; 
 
+import { connect } from 'react-redux';
+
+
+const mapStateToProps = state => 
+(
+    {
+        fields: state.fields
+    }
+);
 
 const TabsTableHead = ({ fields }) =>
 (
     <thead className="tabs-table-thead">
         <tr className="tabs-table-thead-tr">
+
+            <th 
+                className="tabs-table-cell"
+            >
+            </th>
+
             {
                 fields
                     .map((field, index) =>
@@ -24,4 +39,6 @@ const TabsTableHead = ({ fields }) =>
     </thead>
 );
 
-export default TabsTableHead; 
+export default connect(
+    mapStateToProps
+)(TabsTableHead); 

@@ -1,0 +1,18 @@
+.tabs-table
+{
+    border-collapse: collapse; 
+    border: 1px solid black;
+}
+
+
+.tabs-table-cell:not(:first-child) 
+{
+    width: 150px; 
+    height: 25px; 
+    text-align: center; 
+}
+
+.tabs-table-cell:first-child
+{
+    border-right: 1px solid black; 
+}

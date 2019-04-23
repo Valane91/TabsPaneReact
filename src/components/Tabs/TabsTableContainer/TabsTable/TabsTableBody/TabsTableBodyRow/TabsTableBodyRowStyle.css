@@ -1,0 +1,9 @@
+.tabs-table-tr 
+{
+    border: 1px solid black; 
+}
+
+.tabs-table-tr-gray
+{
+    background: lightgray;
+}

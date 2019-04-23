@@ -1,21 +1,30 @@
 import React from 'react'; 
 
+import { connect } from 'react-redux';
+
 import TabsTableBodyRow from './TabsTableBodyRow'; 
 
 
-const TabsTableBody = ({ rows }) => 
+const mapStateToProps = state => 
+(
+    {
+        values: state.values
+    }
+);
+
+const TabsTableBody = ({ values }) => 
 (
     <tbody className="tabs-table-tbody">
         {
-            rows
-                .map((row, index) => 
+            values
+                .map((value, index) => 
                     {
                         return(
                             <TabsTableBodyRow
                                 key={`tabsTableBodyRow_${index}`}
 
                                 isGray={ (index % 2) !== 0 } 
-                                cells={row}
+                                cells={value}
                             />
                         );
                     }
@@ -24,4 +33,6 @@ const TabsTableBody = ({ rows }) =>
     </tbody>
 ); 
 
-export default TabsTableBody; 
+export default connect(
+    mapStateToProps
+)(TabsTableBody); 

@@ -1,0 +1,28 @@
+.tabs-button
+{
+    font-family: 'Comfortaa', cursive;
+
+    margin: 0px;
+    padding: 0px;    
+    
+    background: none; 
+    border-top-right-radius: 30%; 
+    border: none; 
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: none;
+    width: 100px;   
+    height: 35px;
+    cursor: pointer; 
+}
+
+.tabs-button:hover 
+{
+    background: lightgray; 
+}
+
+.tabs-button-active
+{
+    background: lightgray;
+}
